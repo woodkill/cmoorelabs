@@ -1,7 +1,8 @@
 import asyncio
 import discord
-import config
 import os
+
+import mytoken
 
 from discord.ext import commands
 
@@ -39,6 +40,6 @@ async def set_up():
 async def main():
     await load()
     await set_up()
-    await bot.start(config.TOKEN)
+    await bot.start(mytoken.TOKEN)
 
 asyncio.run(main())
